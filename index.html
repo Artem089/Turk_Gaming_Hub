@@ -13,9 +13,9 @@
         tempore voluptates!</p>
     <button id="buy">Купить</button>
 </div>
-<form id="form">
+<form id="form" style="display: none;">
     <input type="text" placeholder="Имя" name="" id="user_name">
-    <input type="Email" placeholder="Почта" name="" id="user_name">
+    <input type="Email" placeholder="Почта" name="" id="user_email">
     <button id="order">Оформить</button>
 </form>
 
@@ -29,7 +29,7 @@
     buy.addEventListener("click", () => {
         document.getElementById("web").style.display = "none";
         document.getElementById("form").style.display = "block";
-        document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name ;
+        document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
     });
 
     order.addEventListener("click", () => {
