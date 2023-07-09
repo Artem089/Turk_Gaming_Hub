@@ -5,7 +5,7 @@
     <title>Turk_Gaming_Hub</title>
 </head>
 <body>
-<div id="Веб-Приложение(ВнутриБота).py">
+<div id="Веб-Приложение(ВнутриБота)">
     <h1>Онлайн магазин</h1>
     <img src="Min.jpg" alt="">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores ducimus maiores omnis praesentium
@@ -13,6 +13,26 @@
         tempore voluptates!</p>
     <button id="buy">Купить</button>
 </div>
+<form>
+    <input type="text" name="" id="user_name">
+</form>
 
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+<script>
+    let tg = window.Telegram.WebApp;
+    let buy = document.getElementById("buy");
+    let order = document.getElementById("order");
+
+    buy.addEventListener("click", () => {
+        document.getElementById("Веб-Приложение(ВнутриБота)").style.display = "none";
+        document.getElementById("form").style.display = "block";
+        document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " tg.initDataUnsafe.user.last_name ;
+    });
+
+    order.addEventListener("click", () => {
+        tg.close();
+    });
+</script>
 </body>
 </html>
