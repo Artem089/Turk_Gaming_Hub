@@ -5,7 +5,7 @@
     <title>Turk_Gaming_Hub</title>
 </head>
 <body>
-<div id="Веб-Приложение(ВнутриБота)">
+<div id="web">
     <h1>Онлайн магазин</h1>
     <img src="Min.jpg" alt="">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores ducimus maiores omnis praesentium
@@ -27,7 +27,7 @@
     let order = document.getElementById("order");
 
     buy.addEventListener("click", () => {
-        document.getElementById("Веб-Приложение(ВнутриБота)").style.display = "none";
+        document.getElementById("web").style.display = "none";
         document.getElementById("form").style.display = "block";
         document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " tg.initDataUnsafe.user.last_name ;
     });
